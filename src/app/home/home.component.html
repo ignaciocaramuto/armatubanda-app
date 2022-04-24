@@ -1,9 +1,30 @@
 <div class="home-body">
     <app-header></app-header>
-    <div class="search">
+    <div class="content">
         <div>
             <p>Encontrá tu banda ideal</p>
-            <input type="text" pInputText [(ngModel)]="searchText"/>
+            <div class="search-bar">
+                <div class="dropdowns">
+                    <p-dropdown
+                        class="multiselect"
+                        [options]="singleOptions"
+                        [(ngModel)]="selectedOption"
+                        (onChange)="changeMultiSelectOptions()"
+                        optionValue="code"
+                        optionLabel="name"
+                        placeholder="Selecciona uno">
+                    </p-dropdown>
+                    <p-multiSelect
+                        class="multiselect"
+                        [options]="multipleOptions"
+                        [(ngModel)]="selectedMultipleOptions"
+                        optionLabel="name"
+                        [disabled]="disableMultiselect"
+                        placeholder="Selecciona uno o varios">
+                    </p-multiSelect>
+                </div>
+                <p-button label="Buscar"></p-button>
+            </div>
         </div>
     </div>
 </div>
