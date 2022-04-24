@@ -5,8 +5,23 @@
             <p>Encontrá tu banda ideal</p>
             <div class="search-bar">
                 <div class="dropdowns">
-                    <p-dropdown class="multiselect" [options]="options" [(ngModel)]="selectedOption" optionLabel="name"></p-dropdown>
-                    <p-multiSelect class="multiselect" [options]="options" [(ngModel)]="selectedOption" optionLabel="name"></p-multiSelect>
+                    <p-dropdown
+                        class="multiselect"
+                        [options]="singleOptions"
+                        [(ngModel)]="selectedOption"
+                        (onChange)="changeMultiSelectOptions()"
+                        optionValue="code"
+                        optionLabel="name"
+                        placeholder="Selecciona uno">
+                    </p-dropdown>
+                    <p-multiSelect
+                        class="multiselect"
+                        [options]="multipleOptions"
+                        [(ngModel)]="selectedMultipleOptions"
+                        optionLabel="name"
+                        [disabled]="disableMultiselect"
+                        placeholder="Selecciona uno o varios">
+                    </p-multiSelect>
                 </div>
                 <p-button label="Buscar"></p-button>
             </div>
