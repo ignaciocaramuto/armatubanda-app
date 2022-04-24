@@ -6,7 +6,7 @@
     background-size: cover;
     min-height: 100%;
     min-width: 100%;
-    .search {
+    .content {
         display: flex;
         justify-content: left;
         align-items: center;
@@ -18,15 +18,55 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 0 0 10px 0;
         }
-        .p-inputtext {
+        .search-bar {
             width: 100%;
-            background-color: rgba(255,255,255,0.4);
+            display: flex;
+            justify-content: space-around;
+            background-color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            border-radius: 15px;
+            height: 65px;
+            align-items: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            .dropdowns {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .multiselect {
+                    width: 50%;
+                }
+            }
         }
     }
 }
 
+::ng-deep {
+    .p-dropdown, .p-multiselect {
+        width: 100%;
+        border: 0;
+        border-color: none;
+    }
+    .p-dropdown:not(.p-disabled).p-focus, .p-multiselect:not(.p-disabled).p-focus {
+        box-shadow: 0 0 0 0 #FFFFFF;
+    }
+    .p-button {
+        background-color: #E18735;
+        border-color: #E18735;
+        margin-right: 0.5em;
+        border-radius: 15px;
+        transition: all 0.4s;
+    }
+    .p-button:not([disabled]):hover {
+        background-color: #E18735;
+        border-color: #E18735;
+        transform: scale(1.05,1.05);
+        -webkit-transform: scale(1.05,1.05);
+        -moz-transform: scale(1.05,1.05);
+    }
+}
+
 @media (max-width: 828px) {
-    .search {
+    .content {
         justify-content: center !important;
         margin-left: 0 !important;
     }
