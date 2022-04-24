@@ -9,9 +9,16 @@ export class HomeComponent implements OnInit {
 
   searchText: string;
 
+  options: any[];
+  selectedOption: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.options = [
+      {name: 'Músicos', code: '1'},
+      {name: 'Bandas', code: '2'},
+    ];
   }
 
 }

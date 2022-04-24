@@ -1,9 +1,15 @@
 <div class="home-body">
     <app-header></app-header>
-    <div class="search">
+    <div class="content">
         <div>
             <p>Encontrá tu banda ideal</p>
-            <input type="text" pInputText [(ngModel)]="searchText"/>
+            <div class="search-bar">
+                <div class="dropdowns">
+                    <p-dropdown class="multiselect" [options]="options" [(ngModel)]="selectedOption" optionLabel="name"></p-dropdown>
+                    <p-multiSelect class="multiselect" [options]="options" [(ngModel)]="selectedOption" optionLabel="name"></p-multiSelect>
+                </div>
+                <p-button label="Buscar"></p-button>
+            </div>
         </div>
     </div>
 </div>
