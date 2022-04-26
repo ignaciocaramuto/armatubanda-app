@@ -11,6 +11,7 @@ import { DialogModule } from 'primeng/dialog';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { VirtualScrollerModule } from 'primeng/virtualscroller';
     DialogModule,
     CheckboxModule,
     InputTextModule,
-    VirtualScrollerModule
+    VirtualScrollerModule,
+    DividerModule
   ],
   exports: [
     ButtonModule,
@@ -35,7 +37,8 @@ import { VirtualScrollerModule } from 'primeng/virtualscroller';
     DialogModule,
     CheckboxModule,
     InputTextModule,
-    VirtualScrollerModule
+    VirtualScrollerModule,
+    DividerModule
   ],
   providers: [],
 })
