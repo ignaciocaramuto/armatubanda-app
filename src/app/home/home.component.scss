@@ -63,6 +63,9 @@
         -webkit-transform: scale(1.05,1.05);
         -moz-transform: scale(1.05,1.05);
     }
+    .p-divider.p-divider-vertical {
+        padding: 0;
+    }
 }
 
 @media (max-width: 828px) {
