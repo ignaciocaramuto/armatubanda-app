@@ -1,0 +1,14 @@
+<p-card>
+    <ng-template pTemplate="header">
+        <img src="https://i.ibb.co/9HD3gMf/img-random.png" alt="">
+    </ng-template>
+    <div class="rating">
+        <i class="fa fa-star"></i>
+        <b> 4.5</b>
+        <p>(15 opiniones)</p>
+        <b>Guitarrista</b>
+    </div>
+    <div class="description">
+        {{ description | slice:0:125 }}...
+    </div>
+</p-card>

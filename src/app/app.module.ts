@@ -8,12 +8,16 @@ import { AppComponent } from './app.component';
 import { PrimengModule } from './primeng/primeng.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { ListadoComponent } from './listado/listado.component';
+import { CardComponent } from './listado/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ListadoComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
