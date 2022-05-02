@@ -10,8 +10,8 @@
                         [options]="singleOptions"
                         [(ngModel)]="selectedOption"
                         (onChange)="changeMultiSelectOptions()"
-                        optionValue="code"
-                        optionLabel="name"
+                        optionValue="id"
+                        optionLabel="nombre"
                         placeholder="Selecciona uno">
                     </p-dropdown>
                     <p-divider layout="vertical">
@@ -20,7 +20,7 @@
                         class="multiselect"
                         [options]="multipleOptions"
                         [(ngModel)]="selectedMultipleOptions"
-                        optionLabel="name"
+                        optionLabel="nombre"
                         [disabled]="disableMultiselect"
                         placeholder="Selecciona uno o varios">
                     </p-multiSelect>

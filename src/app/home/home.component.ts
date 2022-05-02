@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,46 +10,52 @@ export class HomeComponent implements OnInit {
 
   searchText: string;
 
-  singleOptions: any[];
-  multipleOptions: any[];
-  selectedOption: string;
+  singleOptions: any;
+  multipleOptions: any;
+
+  arrayGeneros: any;
+  arrayInstrumentos: any;
+
+  selectedOption: number;
   selectedMultipleOptions: string[];
   disableMultiselect = true;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.singleOptions = [
-      {name: 'Músicos', code: '1'},
-      {name: 'Bandas', code: '2'},
-    ];
-    this.multipleOptions = [
-      {name: 'Rock', code: '1'},
-      {name: 'Clásico', code: '2'},
-      {name: 'Pop', code: '3'},
-      {name: 'Punk', code: '4'},
-      {name: 'Jazz', code: '5'}
-    ];
+    this.getTipos();
+    this.getGeneros();
+    this.getInstrumentos();
+    
   }
 
+  getTipos(){
+    this.http.get('https://localhost:5001/api/tipos').subscribe({
+      next: response => this.singleOptions = response,
+      error: error => console.log(error)
+    })
+  }
+
+  getGeneros(){
+    this.http.get('https://localhost:5001/api/generos').subscribe({
+      next: response => this.arrayGeneros = response,
+      error: error => console.log(error)
+    })
+  }
+
+  getInstrumentos(){
+    this.http.get('https://localhost:5001/api/instrumentos').subscribe({
+      next: response => this.arrayInstrumentos = response,
+      error: error => console.log(error)
+    })
+  }
+  
   changeMultiSelectOptions(): void {
     this.disableMultiselect = false;
-    if (this.selectedOption === '1') {
-      this.multipleOptions = [
-        {name: 'Guitarra', code: '1'},
-        {name: 'Piano', code: '2'},
-        {name: 'Violin', code: '3'},
-        {name: 'Trompeta', code: '4'},
-        {name: 'Bajo', code: '5'}
-      ];
-    } else if (this.selectedOption === '2') {
-      this.multipleOptions = [
-        {name: 'Rock', code: '1'},
-        {name: 'Clásico', code: '2'},
-        {name: 'Pop', code: '3'},
-        {name: 'Punk', code: '4'},
-        {name: 'Jazz', code: '5'}
-      ];
+    if (this.selectedOption === 1) {
+      this.multipleOptions = this.arrayInstrumentos;
+    } else if (this.selectedOption === 2) {
+      this.multipleOptions = this.arrayGeneros;
     }
   }
 }
