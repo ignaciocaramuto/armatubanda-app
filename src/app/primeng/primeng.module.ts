@@ -12,6 +12,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { DividerModule } from 'primeng/divider';
+import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { DividerModule } from 'primeng/divider';
     CheckboxModule,
     InputTextModule,
     VirtualScrollerModule,
-    DividerModule
+    DividerModule,
+    SidebarModule
   ],
   exports: [
     ButtonModule,
@@ -38,7 +40,8 @@ import { DividerModule } from 'primeng/divider';
     CheckboxModule,
     InputTextModule,
     VirtualScrollerModule,
-    DividerModule
+    DividerModule,
+    SidebarModule
   ],
   providers: [],
 })
