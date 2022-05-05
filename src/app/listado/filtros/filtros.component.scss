@@ -1,5 +1,24 @@
-:host::ng-deep {
-    .p-sidebar {
-        position: unset;
+.filter {
+    width: 20rem;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #FFFFFF;
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        p {
+            margin-top: 2em;
+        }
+    }
+}
+
+@media (max-width: 664px) {
+    .filter {
+        position: absolute;
+        z-index: 2;
+        min-height: 100%;
     }
 }
