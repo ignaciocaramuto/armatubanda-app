@@ -1,12 +1,17 @@
-<div *ngIf="users" class="list">
-    <div *ngFor="let user of users">
-        <app-card 
-            [description]="user.descripcion"
-            [name]="user.nombre"
-            [image]="user.img"
-            [rate]="user.rate"
-            [opinions]="user.opiniones"
-            [rol]="user.rol">
-        </app-card>
+<app-header></app-header>
+<p-button type="text" (click)="displayFilters()" icon="pi pi-plus" label="Show"></p-button>
+<div class="container">
+    <app-filtros [display]="showFilters"></app-filtros>
+    <div *ngIf="users" class="list">
+        <div *ngFor="let user of users">
+            <app-card 
+                [description]="user.descripcion"
+                [name]="user.nombre"
+                [image]="user.img"
+                [rate]="user.rate"
+                [opinions]="user.opiniones"
+                [rol]="user.rol">
+            </app-card>
+        </div>
     </div>
 </div>
