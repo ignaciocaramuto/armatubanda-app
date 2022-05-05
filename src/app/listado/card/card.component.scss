@@ -1,0 +1,48 @@
+img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5em;
+    color: #000000;
+    p {
+        font-weight: 400;
+        font-size: 12px;
+        margin: 0;
+        color: #787878;
+        align-self: center;
+        margin-left: 0.3em;
+        margin-right: 0.5em;
+        margin-top: 0.1em;
+    }
+}
+
+i {
+    color: #E18735;
+    margin-top: 0.1em;
+    margin-right: 0.3em;
+}
+
+.description {
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    font-size: 13px;
+    font-weight: bold;
+    color: #8D8D8D;
+}
+
+:host ::ng-deep {
+    .p-card {
+        width: 300px;
+        height: 360px;
+    }
+    .p-card .p-card-body{
+        padding: 0;
+    }
+    .p-card .p-card-content {
+        padding: 0;
+    }
+}

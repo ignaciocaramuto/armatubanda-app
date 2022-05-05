@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { PrimengModule } from './primeng/primeng.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { ListadoComponent } from './listado/listado.component';
+import { CardComponent } from './listado/card/card.component';
+import { FiltrosComponent } from './listado/filtros/filtros.component';
 
 import {HttpClientModule} from '@angular/common/http'
 
@@ -15,7 +18,10 @@ import {HttpClientModule} from '@angular/common/http'
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ListadoComponent,
+    CardComponent,
+    FiltrosComponent
   ],
   imports: [
     BrowserModule,
