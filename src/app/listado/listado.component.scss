@@ -4,9 +4,11 @@
 
 .list {
     width: 100%;
+    height: calc(100vh - 150px);
     display: grid;
     gap: 0rem;
     grid-auto-rows: 24rem;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     justify-items: center;
+    overflow-y: auto;
 }
