@@ -1,5 +1,4 @@
-<app-header></app-header>
-<p-button type="text" (click)="displayFilters()" icon="pi pi-plus" label="Show"></p-button>
+<app-header (displayFilters)="displayFilters()"></app-header>
 <div class="container">
     <app-filtros [display]="showFilters"></app-filtros>
     <div *ngIf="users" class="list">

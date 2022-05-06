@@ -12,13 +12,24 @@
         p {
             margin-top: 2em;
         }
+        .filter-inputs {
+            width: 230px;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+:host::ng-deep {
+    .p-dropdown, .p-multiselect {
+        width: 100%;
     }
 }
 
 @media (max-width: 664px) {
     .filter {
-        position: absolute;
-        z-index: 2;
+        position: fixed;
+        z-index: 10;
         min-height: 100%;
+        box-shadow: 0 0 0 22em rgba(0, 0, 0, 0.4);
     }
 }
