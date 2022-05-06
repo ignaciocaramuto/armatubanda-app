@@ -1,5 +1,19 @@
 <div class="filter" *ngIf="display">
     <div class="filter-container">
-        
+        <p>
+            <b>Filtros</b>
+        </p>
+        <input class="filter-inputs" type="text" pInputText />
+        <p-dropdown class="filter-inputs" [options]="userType" [(ngModel)]="selectedUser" optionLabel="name"></p-dropdown>
+        <p-multiSelect class="filter-inputs" [options]="intruments" [(ngModel)]="selectedInstruments" optionLabel="name"></p-multiSelect>
+        <h5>Rating: {{ratingValues[0] + ' - ' + ratingValues[1]}}</h5>
+        <p-slider
+            class="filter-inputs"
+            [(ngModel)]="ratingValues"
+            [range]="true"
+            [min]="1"
+            [max]="5"
+            [step]="0.1">
+        </p-slider>
     </div>
 </div>
