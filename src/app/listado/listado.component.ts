@@ -9,7 +9,7 @@ import { Usuario } from './usuario.entities';
 })
 export class ListadoComponent implements OnInit {
 
-  showFilters = false;
+  showFilters = true;
 
   users: Usuario[] = [];
 
@@ -22,11 +22,7 @@ export class ListadoComponent implements OnInit {
   }
 
   displayFilters(): void {
-    if (this.showFilters) {
-      this.showFilters = false;
-    } else {
-      this.showFilters = true;
-    }
+    this.showFilters = !this.showFilters;
   }
 
 }
