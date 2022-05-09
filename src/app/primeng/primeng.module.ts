@@ -13,6 +13,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { DividerModule } from 'primeng/divider';
 import { SliderModule } from 'primeng/slider';
+import {PasswordModule} from 'primeng/password';
+
 
 @NgModule({
   imports: [
@@ -28,7 +30,8 @@ import { SliderModule } from 'primeng/slider';
     InputTextModule,
     VirtualScrollerModule,
     DividerModule,
-    SliderModule
+    SliderModule,
+    PasswordModule
   ],
   exports: [
     ButtonModule,
@@ -41,7 +44,8 @@ import { SliderModule } from 'primeng/slider';
     InputTextModule,
     VirtualScrollerModule,
     DividerModule,
-    SliderModule
+    SliderModule,
+    PasswordModule
   ],
   providers: [],
 })

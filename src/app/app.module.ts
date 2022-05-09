@@ -12,7 +12,9 @@ import { ListadoComponent } from './listado/listado.component';
 import { CardComponent } from './listado/card/card.component';
 import { FiltrosComponent } from './listado/filtros/filtros.component';
 
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {HttpClientModule} from '@angular/common/http'
     HomeComponent,
     ListadoComponent,
     CardComponent,
-    FiltrosComponent
+    FiltrosComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
