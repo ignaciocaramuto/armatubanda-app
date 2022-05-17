@@ -1,21 +1,30 @@
 <div class="login">
-    <form #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off">
-      <input
-        pInputText 
-        name="username"
-        [(ngModel)]="model.username"
-        class="form-control mr-sm-2"  
-        type="text"
-        placeholder="Username"
-      />
-      <input
-        pPassword
-        name="password"
-        [(ngModel)]="model.password"
-        class="form-control mr-sm-2"
-        type="password"
-        placeholder="Password"
-      />
-      <button pButton pRipple type="submit" label="Login" class="p-button-raised p-button-text"></button>
+  <div class="login-container">
+    <h2>Conectarse</h2>
+    <form #loginForm="ngForm" class="form-inline" (ngSubmit)="login()" autocomplete="off">
+      <div class="login-actions">
+        <input
+          pInputText 
+          name="username"
+          [(ngModel)]="model.username"
+          class="form-control"  
+          type="text"
+          placeholder="Username"
+        />
+        <input
+          pPassword
+          name="password"
+          [(ngModel)]="model.password"
+          class="form-control"
+          type="password"
+          placeholder="Password"
+        />
+        <p-button type="submit" label="Login"></p-button>
+      </div>
+      <div class="text-actions">
+        <p>¿No tienes una cuenta? Registrate</p>
+        <p>¿Olvidaste la contraseña?</p>
+      </div>
     </form>
   </div>
+</div>
