@@ -6,12 +6,12 @@ img {
     display: flex;
     align-items: center;
     margin-left: 0.5em;
-    color: #000000;
+    color: var(--black);
     p {
         font-weight: 400;
         font-size: 12px;
         margin: 0;
-        color: #787878;
+        color: var(--text-light-grey);
         align-self: center;
         margin-left: 0.3em;
         margin-right: 0.5em;
@@ -20,7 +20,7 @@ img {
 }
 
 i {
-    color: #E18735;
+    color: var(--main-color);
     margin-top: 0.1em;
     margin-right: 0.3em;
 }
@@ -30,14 +30,14 @@ i {
     margin-top: 0.5em;
     font-size: 13px;
     font-weight: bold;
-    color: #8D8D8D;
+    color: var(--text-grey);
 }
 
 :host ::ng-deep {
     .p-card {
         width: 300px;
         height: 360px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: var(--box-shadow);
         border-radius: 0;
     }
     .p-card .p-card-body{
