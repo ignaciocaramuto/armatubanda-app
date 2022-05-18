@@ -1,0 +1,57 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    height: 400px;
+    width: 400px;
+    box-shadow: var(--box-shadow);
+    h2 {
+        text-align: center;
+    }
+}
+
+.login-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actions-container {
+    width: 300;
+    margin-bottom: 1em;
+}
+
+.text-actions {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a:-webkit-any-link {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        color: var(--black);
+        text-decoration: none;
+    }
+}
+
+:host::ng-deep {
+    .p-inputtext {
+        width: 300px;
+        border-radius: 15px;
+        margin-bottom: 1em;
+    }
+    .p-button {
+        width: 300px;
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+        border-radius: 15px;
+    }
+    .p-button:not([disabled]):hover {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+    }
+}
