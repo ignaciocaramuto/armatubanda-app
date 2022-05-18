@@ -3,28 +3,34 @@
     <h2>Conectarse</h2>
     <form #loginForm="ngForm" class="form-inline" (ngSubmit)="login()" autocomplete="off">
       <div class="login-actions">
-        <input
-          pInputText 
-          name="username"
-          [(ngModel)]="model.username"
-          class="form-control"  
-          type="text"
-          placeholder="Nombre de usuario"
-        />
-        <input
-          pPassword
-          name="password"
-          [(ngModel)]="model.password"
-          class="form-control"
-          type="password"
-          placeholder="Contraseña"
-          [feedback]="false"
-        />
+        <span class="p-input-icon-left">
+          <i class="fa fa-user-o"></i>
+            <input
+              pInputText 
+              name="username"
+              [(ngModel)]="model.username"
+              class="form-control"  
+              type="text"
+              placeholder="Nombre de usuario"
+            />
+        </span>
+        <span class="p-input-icon-left">
+          <i class="fa fa-lock"></i>
+            <input
+              pPassword
+              name="password"
+              [(ngModel)]="model.password"
+              class="form-control"
+              type="password"
+              placeholder="Contraseña"
+              [feedback]="false"
+            />
+        </span>
         <p-button type="submit" label="Login"></p-button>
       </div>
       <div class="text-actions">
-        <p>¿No tienes una cuenta? Regístrate</p>
-        <p>¿Olvidaste la contraseña?</p>
+        <a href="/registro">¿No tienes una cuenta? Regístrate</a>
+        <a href="">¿Olvidaste la contraseña?</a>
       </div>
     </form>
   </div>
