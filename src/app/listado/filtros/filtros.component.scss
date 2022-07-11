@@ -25,6 +25,10 @@
                 background-color: var(--main-color);
                 border-color: var(--main-color);
             }
+            .limpiar {
+                background-color: #49547A;
+                border-color: #49547A;
+            }
         }
     }
 }
@@ -35,6 +39,16 @@
     }
     .p-slider {
         margin-bottom: 1em;
+    }
+    .p-slider .p-slider-range {
+        background: #49547A;
+    }
+    .p-slider .p-slider-handle {
+        border: 2px solid #49547A;
+    }
+    .p-slider:not(.p-disabled) .p-slider-handle:hover {
+        background: #49547A;
+        border-color: #49547A;
     }
     .p-button {
         width: 6em;
