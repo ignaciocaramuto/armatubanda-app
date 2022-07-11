@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { forkJoin } from 'rxjs';
+import { FiltrosService } from './filtros.service';
 
 @Component({
   selector: 'app-filtros',
@@ -8,55 +10,43 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FiltrosComponent implements OnInit {
   
   userType: any[];
-  selectedUser: string;
+  selectedUser: any;
 
-  intruments: any[];
-  selectedInstruments: string[];
+  instruments: any[];
+  selectedInstruments: any[];
+
+  genres: any[];
+  selectedGenres: any[];
+
+  multipleOptions: any[];
+  selectedMultipleOptions: any[];
 
   @Input() display;
 
   ratingValues: number[] = [1,5];
 
-  constructor() {
-    this.userType = [
-      {
-        name: 'Musicos',
-        code: '1'
-      },
-      {
-        name: 'Bandas',
-        code: '1'
+  constructor(private filtrosService: FiltrosService) {}
+
+  ngOnInit(): void {
+    forkJoin([
+      this.filtrosService.getTiposUsuarios(),
+      this.filtrosService.getGeneros(),
+      this.filtrosService.getInstrumentos()
+    ]).subscribe(([tiposUsuarios, generos, instrumentos]: [any[], any[], any[]]) => {
+        this.userType = tiposUsuarios;
+        this.genres = generos;
+        this.instruments = instrumentos;
+        this.multipleOptions = instrumentos //TODO: setear por default los filtros seleccionados en home
       }
-    ];
-    this.intruments = [
-      {
-        name: 'Guitarra',
-        code: '1'
-      },
-      {
-        name: 'Bajo',
-        code: '1'
-      },
-      {
-        name: 'Saxo',
-        code: '1'
-      },
-      {
-        name: 'Trompeta',
-        code: '1'
-      },
-      {
-        name: 'Piano',
-        code: '1'
-      },
-      {
-        name: 'Bateria',
-        code: '1'
-      }
-    ]
+    )
   }
 
-  ngOnInit(): void {  
+  changeMultiSelectOptions(): void {
+    if (this.selectedUser.id === 1) {
+      this.multipleOptions = this.instruments;
+    } else if (this.selectedUser.id === 2) {
+      this.multipleOptions = this.genres;
+    }
   }
 
 }

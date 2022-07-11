@@ -3,10 +3,21 @@
         <p>
             <b>Filtros</b>
         </p>
-        <input class="filter-inputs" type="text" pInputText />
-        <p-dropdown class="filter-inputs" [options]="userType" [(ngModel)]="selectedUser" optionLabel="name"></p-dropdown>
-        <p-multiSelect class="filter-inputs" [options]="intruments" [(ngModel)]="selectedInstruments" optionLabel="name"></p-multiSelect>
-        <h5>Rating: {{ratingValues[0] + ' - ' + ratingValues[1]}}</h5>
+        <input class="filter-inputs" type="text" pInputText placeholder="Nombre"/>
+        <p-dropdown
+            class="filter-inputs"
+            [options]="userType"
+            [(ngModel)]="selectedUser"
+            optionLabel="nombre"
+            (onChange)="changeMultiSelectOptions()">
+        </p-dropdown>
+        <p-multiSelect
+            class="filter-inputs"
+            [options]="multipleOptions"
+            [(ngModel)]="selectedMultipleOptions"
+            optionLabel="nombre">
+        </p-multiSelect>
+        <h4>Rating: {{ratingValues[0] + ' - ' + ratingValues[1]}}</h4>
         <p-slider
             class="filter-inputs"
             [(ngModel)]="ratingValues"
