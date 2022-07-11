@@ -2,7 +2,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(255,255,255,0.4);
     height: 70px;
     p {
         color: var(--main-color);
@@ -27,6 +26,14 @@
         align-items: center;
         margin-left: 1em;
     }
+}
+
+.home-header {
+    background-color: rgba(255,255,255,0.4);
+}
+
+.other-routes-header {
+    background-color: #FFFFFF;
 }
 
 :host ::ng-deep {

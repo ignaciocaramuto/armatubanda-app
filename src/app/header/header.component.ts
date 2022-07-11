@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,13 @@ export class HeaderComponent implements OnInit {
 
   @Output() displayFilters = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(public route: Router) { }
 
   ngOnInit(): void {
+    console.log(this.route.url);
+    if (this.route.url === '/') {
+
+    }
   }
 
   showFilters(): void {

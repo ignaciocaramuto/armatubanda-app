@@ -1,4 +1,8 @@
-<div class="header">
+<div class="header"
+    [ngClass]="{
+        'home-header': route.url === '/',
+        'other-routes-header': route.url !== '/'
+    }">
     <div class="bars">
         <button
             pButton
