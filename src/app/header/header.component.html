@@ -1,4 +1,5 @@
 <div class="header"
+    *ngIf="route.url !== '/login' && route.url !== '/registro'"
     [ngClass]="{
         'home-header': route.url === '/',
         'other-routes-header': route.url !== '/'
