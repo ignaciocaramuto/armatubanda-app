@@ -1,6 +1,5 @@
-<app-header (displayFilters)="displayFilters()"></app-header>
 <div class="container">
-    <app-filtros [display]="showFilters"></app-filtros>
+    <app-filtros></app-filtros>
     <div *ngIf="users" class="list">
         <div *ngFor="let user of users">
             <app-card 

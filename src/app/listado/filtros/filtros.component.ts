@@ -13,8 +13,6 @@ export class FiltrosComponent implements OnInit {
   intruments: any[];
   selectedInstruments: string[];
 
-  @Input() display;
-
   ratingValues: number[] = [1,5];
 
   constructor() {
