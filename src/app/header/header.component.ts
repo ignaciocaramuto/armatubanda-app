@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +8,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() displayFilters = new EventEmitter<boolean>();
-
-  constructor() { }
+  constructor(public route: Router) { }
 
   ngOnInit(): void {
-  }
-
-  showFilters(): void {
-    this.displayFilters.emit();
   }
 
 }

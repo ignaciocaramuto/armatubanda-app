@@ -55,12 +55,3 @@
         height: 2.5em;
     }
 }
-
-@media (max-width: 664px) {
-    .filter {
-        position: fixed;
-        z-index: 10;
-        min-height: 100%;
-        box-shadow: 0 0 0 22em rgba(0, 0, 0, 0.4);
-    }
-}

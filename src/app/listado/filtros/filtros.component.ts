@@ -24,8 +24,6 @@ export class FiltrosComponent implements OnInit {
   experience: any[];
   selectedExperience: string;
 
-  @Input() display;
-
   ratingValues: number[] = [1,5];
 
   constructor(private filtrosService: FiltrosService) {
