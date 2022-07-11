@@ -8,15 +8,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() displayFilters = new EventEmitter<boolean>();
-
   constructor(public route: Router) { }
 
   ngOnInit(): void {
-  }
-
-  showFilters(): void {
-    this.displayFilters.emit();
   }
 
 }

@@ -9,8 +9,6 @@ import { Usuario } from './usuario.entities';
 })
 export class ListadoComponent implements OnInit {
 
-  showFilters = true;
-
   users: Usuario[] = [];
 
   constructor(private listService: ListadoService) { }
@@ -19,10 +17,6 @@ export class ListadoComponent implements OnInit {
     this.listService.getAllUsers().subscribe(data => {
       this.users = data;
     });
-  }
-
-  displayFilters(): void {
-    this.showFilters = !this.showFilters;
   }
 
 }
