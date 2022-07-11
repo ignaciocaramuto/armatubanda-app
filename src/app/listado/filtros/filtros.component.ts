@@ -8,24 +8,46 @@ import { FiltrosService } from './filtros.service';
   styleUrls: ['./filtros.component.scss']
 })
 export class FiltrosComponent implements OnInit {
+
+  name: string;
   
   userType: any[];
   selectedUser: any;
 
   instruments: any[];
-  selectedInstruments: any[];
 
   genres: any[];
-  selectedGenres: any[];
 
   multipleOptions: any[];
   selectedMultipleOptions: any[];
+
+  experience: any[];
+  selectedExperience: string;
 
   @Input() display;
 
   ratingValues: number[] = [1,5];
 
-  constructor(private filtrosService: FiltrosService) {}
+  constructor(private filtrosService: FiltrosService) {
+    this.experience = [
+      {
+        id: 1,
+        año: 'Menos de 1 año'
+      },
+      {
+        id: 2,
+        año: 'Entre 1 y 3 años'
+      },
+      {
+        id: 3,
+        año: 'Entre 3 y 5 años'
+      },
+      {
+        id: 4,
+        año: 'Más de 5 años'
+      }
+    ]
+  }
 
   ngOnInit(): void {
     forkJoin([
@@ -47,6 +69,14 @@ export class FiltrosComponent implements OnInit {
     } else if (this.selectedUser.id === 2) {
       this.multipleOptions = this.genres;
     }
+  }
+
+  clearFilters(): void {
+    this.name = null;
+    this.selectedExperience = null;
+    this.selectedMultipleOptions = [];
+    this.selectedUser = null;
+    this.ratingValues = [1,5];
   }
 
 }
