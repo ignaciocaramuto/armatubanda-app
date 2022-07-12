@@ -3,6 +3,8 @@
     height: 40em;
     box-shadow: var(--box-shadow);
     background-color: var(--white);
+    position: sticky;
+    top: 75px;
     .filter-container {
         display: flex;
         flex-direction: column;
