@@ -24,12 +24,8 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'perfil',
+    path: 'perfil/:id',
     component: PerfilComponent
-  },
-  {
-    path: '**',
-    component: HomeComponent
   }
 ];
 
