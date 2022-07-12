@@ -39,11 +39,18 @@ i {
         height: 360px;
         box-shadow: var(--box-shadow);
         border-radius: 0;
+        transition: all 0.4s;
     }
     .p-card .p-card-body{
         padding: 0;
     }
     .p-card .p-card-content {
         padding: 0;
+    }
+    .p-card:not([disabled]):hover {
+        transform: scale(1.05,1.05);
+        -webkit-transform: scale(1.05,1.05);
+        -moz-transform: scale(1.05,1.05);
+        cursor: pointer;
     }
 }
