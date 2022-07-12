@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
+  @Input() id: number;
   @Input() description: string;
   @Input() name: string;
   @Input() image: string;
@@ -17,6 +18,10 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openProfile(): void {
+    console.log(this.id);
   }
 
 }

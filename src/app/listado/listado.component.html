@@ -2,7 +2,8 @@
     <app-filtros></app-filtros>
     <div *ngIf="users" class="list">
         <div *ngFor="let user of users">
-            <app-card 
+            <app-card
+                [id]="user.id"
                 [description]="user.descripcion"
                 [name]="user.nombre"
                 [image]="user.img"
