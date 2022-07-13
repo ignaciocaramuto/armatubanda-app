@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from './shared/_models/user';
 import { AccountService } from './shared/_services/account.service';
 
@@ -13,7 +14,10 @@ export class AppComponent implements OnInit {
   title = 'armatubanda-app';
   users: any;
 
-  constructor(private http: HttpClient,private accountService: AccountService){}
+  constructor(
+    private http: HttpClient,
+    private accountService: AccountService,
+    public route: Router) {}
 
 
   ngOnInit() {

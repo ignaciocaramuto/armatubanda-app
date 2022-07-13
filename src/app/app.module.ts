@@ -14,7 +14,8 @@ import { FiltrosComponent } from './listado/filtros/filtros.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { PerfilComponent } from './perfil/perfil.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component'
     CardComponent,
     FiltrosComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
